@@ -1,17 +1,43 @@
-import React from "react";
-import "./Feedback.css";
-import "../../components/homepage.css";
+
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 import { FaGithub } from "react-icons/fa";
 import github from "../../../../public/github-repo.png";
+import "./Feedback.css";
+import "../../components/homepage.css";
 
 function Feedback() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  // Animation duration (can be customized)
+      once: false,     // Keep animations active every time the section is scrolled into view
+    });
+
+    // Refresh AOS on scroll to re-trigger animations
+    const handleScroll = () => {
+      console.log("Scroll event triggered");
+      AOS.refresh();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div>
         <h1></h1>
         <div className="josefin main flex p-12 py-12 h-screen">
-          <div className="left w-1/3 p-10 py-7 rounded-lg bg-gray-900 border-2 border-teal-500 h-full">
-            <h2 className="josefin text-center  text-yellow-500 font-bold text-5xl">
+          {/* Left Section */}
+          <div
+            className="left w-1/3 p-10 py-7 rounded-lg bg-gray-900 border-2 border-teal-500 h-full"
+            data-aos="fade-right" // AOS trigger for left section
+          >
+            <h2 className="josefin text-center text-yellow-500 font-bold text-5xl">
               <span className="font-semibold text-gray-400 text-2xl">
                 Quick{" "}
               </span>
@@ -21,7 +47,7 @@ function Feedback() {
             <div className="text-center">
               <form action="">
                 <div className="mb-6">
-                  <label htmlFor="message">
+                  <label htmlFor="name">
                     What's your name ? <br />
                   </label>
                   <input
@@ -32,7 +58,7 @@ function Feedback() {
                   />
                 </div>
                 <div className="mb-6">
-                  <label htmlFor="message">
+                  <label htmlFor="email">
                     What's your workmail ? <br />
                   </label>
                   <input
@@ -51,7 +77,7 @@ function Feedback() {
                     type="text"
                     id="message"
                     name="message"
-                  ></input>
+                  />
                 </div>
                 <div className="mb-4">
                   <input type="checkbox" name="beta" id="beta" />
@@ -65,7 +91,7 @@ function Feedback() {
                 </div>
 
                 <button
-                  type="submit  "
+                  type="submit"
                   className="px-6 py-2 font-bold bg-red-500 rounded-lg"
                 >
                   Submit
@@ -73,13 +99,23 @@ function Feedback() {
               </form>
             </div>
           </div>
-          <div className="text-center mid w-80 pt-20 h-80 m-20 mt-40  bg-rose-800 rounded-full flex-col justify-center ">
+
+          {/* Middle Section */}
+          <div
+            className="text-center mid w-80 pt-20 h-80 m-20 mt-40 bg-rose-800 rounded-full flex-col justify-center"
+            data-aos="zoom-in" // Middle section zoom-in animation
+          >
             <h3 className="text-gray-300 text-xl mb-2">Powered By</h3>
             <h2 className="font-bold text-amber-500 text-5xl">Langflow</h2>
             <p className="m-1 text-lg font-bold">&</p>
-            <h2 className="font-bold text-gray-300 text-5xl">GPT-4o</h2>
+            <h2 className="font-bold text-gray-300 text-5xl"> GPT-40</h2>
           </div>
-          <div className="right w-1/3 rounded-lg border-2 border-yellow-500 h-full">
+
+          {/* Right Section */}
+          <div
+            className="right w-1/3 rounded-lg border-2 border-yellow-500 h-full"
+            data-aos="fade-left" // AOS trigger for right section
+          >
             <div className="p-2 px-12">
               <div className="flex justify-center items-center mt-4">
                 <h1 className="text-5xl font-bold mr-2">Contribute </h1>

@@ -1,8 +1,206 @@
-.inputs{
-    background-color: #dadada;
+/* General Styles */
+body {
+    background-color: #1e293b;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Main Container */
+  .josefin.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Left Section */
+  .left {
+    background-color: #1f2937;
+    border-radius: 10px;
+    border: 2px solid #4ade80;
+    width: 30%;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    /* opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards; */
+  }
+  
+  /* Right Section */
+  .right {
+    background-color: #1f2937;
+    width: 30%;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #fbbf24;
+    margin-left: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards; */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInButton {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Feedback Form Section */
+  .inputs {
     width: 100%;
-}
-.inputs:focus{
-    background-color: #ffffff;
-    border: 1px solid #ff0080;
-}
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #4ade80;
+    background-color: #334155;
+    color: white;
+    margin-top: 8px;
+    transition: all 0.3s;
+    /* opacity: 0;
+    animation: fadeInText 1s 0.7s forwards; */
+  }
+  
+  .inputs:focus {
+    border-color: #fbbf24;
+    outline: none;
+    background-color: #3b4551;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #f87171;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInButton 1s 1s forwards;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #fb923c;
+    transform: translateY(-2px);
+  }
+  
+  input[type="checkbox"] {
+    accent-color: #f87171;
+  }
+  
+  label[for="beta"] {
+    color: #e5e7eb;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  
+  /* Left Section Styles */
+  .left h2 {
+    font-size: 2rem;
+    color: #fbbf24;
+    opacity: 0;
+    animation: fadeInText 1s 0.5s forwards;
+  }
+  
+  label {
+    color: #e5e7eb;
+    font-weight: 600;
+  }
+  
+  /* Right Section Styles */
+  .right h1 {
+    font-size: 2rem;
+    color: #fbbf24;
+    opacity: 0;
+    animation: fadeInText 1s 1s forwards;
+  }
+  
+  .right h2 {
+    font-size: 1.5rem;
+    color: #e5e7eb;
+    opacity: 0;
+    animation: fadeInText 1s 1.3s forwards;
+  }
+  
+  .right img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+  }
+  
+  .right button {
+    opacity: 0;
+    animation: fadeInButton 1s 1.7s forwards;
+    padding: 10px 20px;
+    background-color: #f87171;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    border: none;
+  }
+  
+  .right button:hover {
+    background-color: #fb923c;
+    transform: translateY(-2px);
+  }
+  
+  /* AOS Animations */
+  /* [data-aos="fade-left"] {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+  
+  [data-aos="fade-right"] {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+  
+  [data-aos="zoom-in"] {
+    animation: fadeIn 1s ease-in-out forwards;
+  } */
+  [data-aos="fade-left"],
+  [data-aos="fade-right"],
+  [data-aos="zoom-in"] {
+      opacity: 0; /* Start hidden */
+  }
+  

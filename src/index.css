@@ -12,9 +12,25 @@ body{
   background-color: black;
   color: white;
 }
-/* .main{
-  
-  background-image: url('../public/pxfuel-1.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  z-index: 10; /* Ensures content appears above the background */
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Background particles behind all content */
+}
+
