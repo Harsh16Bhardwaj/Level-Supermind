@@ -1,0 +1,109 @@
+body{
+    backdrop-filter: blur(20px);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.login-main{
+}
+
+.login_main{
+    height: 85vh;
+    overflow: hidden;
+}
+.login_left{
+    height: 85vh;
+    background-image: url('../../../../public/pxfuel-2.jpg');
+    background-size: cover;
+}
+.login_right{
+    height: 85vh;
+}
+
+
+
+/**/
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  /* Change the border color when the input field is focused */
+  input[type="text"]:focus {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+  }
+  input[type="text"]:hover {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+
+  }
+
+  /* Style the placeholder text */
+  input[type="email"]::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  /* Change the border color when the input field is focused */
+  input[type="email"]:focus {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+  }
+  input[type="email"]:hover {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+
+  }
+
+  /* Style the placeholder text */
+  input[type="password"]::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  /* Change the border color when the input field is focused */
+  input[type="password"]:focus {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+  }
+  input[type="password"]:hover {
+    border-color: #ff0080; /* Green color when active */
+    outline: none; /* Removes default outline */
+    background-color: #ffffff;
+
+  }
+
+  /* Style the placeholder text */
+  input[type="password"]::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+
+
+  

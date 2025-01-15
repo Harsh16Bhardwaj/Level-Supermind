@@ -1,0 +1,8 @@
+.inputs{
+    background-color: #dadada;
+    width: 100%;
+}
+.inputs:focus{
+    background-color: #ffffff;
+    border: 1px solid #ff0080;
+}

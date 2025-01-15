@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+/* .main{
+  
+  background-image: url('../public/pxfuel-1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
